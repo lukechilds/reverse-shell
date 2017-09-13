@@ -4,6 +4,7 @@
   "description": "Reverse Shell as a Service",
   "main": "src/index.js",
   "scripts": {
+    "start": "micro",
     "test": "xo && nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -25,7 +26,9 @@
     "url": "https://github.com/lukechilds/reverse-shell/issues"
   },
   "homepage": "https://github.com/lukechilds/reverse-shell",
-  "dependencies": {},
+  "dependencies": {
+    "micro": "^9.0.0"
+  },
   "devDependencies": {
     "ava": "^0.22.0",
     "coveralls": "^2.13.1",
