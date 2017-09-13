@@ -31,7 +31,7 @@ This is meant to be used for pentesting or helping coworkers understand why they
 
 ## Demo
 
-<img src="https://i.imgur.com/qEZBDq5.gif" width="1082">
+<img src="https://i.imgur.com/DRqTcLq.gif" width="728">
 
 ## Tip
 
