@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "Reverse Shell as a Service",
   "main": "src/index.js",
-  "files": "src",
+  "files": "src/index.js",
   "scripts": {
     "start": "micro",
     "test": "xo && nyc ava",
