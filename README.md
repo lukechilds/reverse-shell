@@ -1,7 +1,5 @@
 # reverse-shell
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/lukechilds/reverse-shell.svg)](https://greenkeeper.io/)
-
 > Reverse Shell as a Service
 
 [![Build Status](https://travis-ci.org/lukechilds/reverse-shell.svg?branch=master)](https://travis-ci.org/lukechilds/reverse-shell)
