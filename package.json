@@ -6,7 +6,14 @@
   "scripts": {
     "start": "micro",
     "test": "xo && nyc ava",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "deploy": "now --public --env NODE_ENV=production && now alias"
+  },
+  "now": {
+    "alias": [
+      "shell",
+      "reverseshell"
+    ]
   },
   "xo": {
     "extends": "xo-lukechilds"
