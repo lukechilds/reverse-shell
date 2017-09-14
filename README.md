@@ -33,7 +33,7 @@ This is meant to be used for pentesting or helping coworkers understand why they
 
 ## Demo
 
-<img src="https://i.imgur.com/DRqTcLq.gif" width="728">
+<img src="https://i.imgur.com/qqjhxAw.gif" width="808">
 
 ## Tips
 
