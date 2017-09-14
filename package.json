@@ -1,7 +1,7 @@
 {
   "name": "reverse-shell",
   "version": "1.0.0",
-  "description": "Reverse Shell as a Service",
+  "description": "Reverse Shell as a Service - https://shell.now.sh",
   "main": "src/index.js",
   "scripts": {
     "start": "micro",

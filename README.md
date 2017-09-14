@@ -1,6 +1,6 @@
 # reverse-shell
 
-> Reverse Shell as a Service
+> Reverse Shell as a Service - https://shell.now.sh
 
 [![Build Status](https://travis-ci.org/lukechilds/reverse-shell.svg?branch=master)](https://travis-ci.org/lukechilds/reverse-shell)
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/reverse-shell/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/reverse-shell?branch=master)
