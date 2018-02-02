@@ -1,6 +1,6 @@
 {
   "name": "reverse-shell",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Reverse Shell as a Service - https://shell.now.sh",
   "main": "src/index.js",
   "files": [
