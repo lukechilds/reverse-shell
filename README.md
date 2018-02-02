@@ -8,6 +8,8 @@
 
 Easy to remember reverse shell that should work on most Unix-like systems.
 
+The script will detect available software on the target and run the appropriate payload.
+
 ## Usage
 
 ### 1. Listen for connection
