@@ -20,10 +20,13 @@ const generateScript = (host, port) => {
 	};
 
 	return Object.entries(payloads).reduce((script, [cmd, payload]) => {
-		script += `if command -v ${cmd} > /dev/null 2>&1; then\n` +
-			`	${payload}\n` +
-			'	exit; \n' +
-			'fi \n';
+		script += `
+
+if command -v ${cmd} > /dev/null 2>&1; then
+	${payload}
+	exit;
+fi`;
+
 		return script;
 	}, '');
 };
