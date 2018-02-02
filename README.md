@@ -8,7 +8,7 @@
 
 Easy to remember reverse shell that should work on most Unix-like systems.
 
-The script will detect available software on the target and run the appropriate payload.
+Detects available software on the target and runs an appropriate payload.
 
 ## Usage
 
