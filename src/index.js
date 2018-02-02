@@ -23,8 +23,8 @@ const generateScript = (host, port) => {
 
 	return Object.keys(payloads).reduce((acc, cmd) => {
 		acc += `if command -v ${cmd} > /dev/null 2>&1; then\n` +
-			` ${payloads[cmd]}\n` +
-			' exit; \n' +
+			`	${payloads[cmd]}\n` +
+			'	exit; \n' +
 			'fi \n';
 		return acc;
 	}, '');
