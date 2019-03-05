@@ -69,9 +69,9 @@ Be careful if you do this to a coworker, if they leave the office with this stil
 
 ### Running as a background process
 
-You'll need to leave the terminal session open to keep the reverse shell process running. Tat might be a bit of a giveaway if you're trying to praknk coworkers.
+The terminal session needs to be kept open to persists the reverse shell connection. That might be a bit of a giveaway if you're trying to prank coworkers.
 
-The following command will run the reverse shell in a background process and exit the terminal leaving nothing obvious on the victim's machine.
+The following command will run the reverse shell in a background process and exit the terminal, leaving no suspicious looking terminal windows open on the victim's machine.
 
 Make sure you run this in a fresh terminal window otherwise you'll lose any work in your existing session.
 
