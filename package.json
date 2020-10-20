@@ -12,13 +12,6 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "deploy": "now --public --env NODE_ENV=production && now alias"
   },
-  "now": {
-    "alias": [
-      "shell",
-      "reverseshell",
-      "xn--io8h"
-    ]
-  },
   "xo": {
     "extends": "xo-lukechilds"
   },
