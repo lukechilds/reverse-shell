@@ -1,6 +1,6 @@
 {
   "name": "reverse-shell",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Reverse Shell as a Service - https://reverse-shell.sh",
   "main": "src/index.js",
   "files": [
