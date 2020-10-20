@@ -7,7 +7,7 @@
     "src"
   ],
   "scripts": {
-    "start": "micro",
+    "start": "micro -l tcp://0.0.0.0:${PORT-3000}",
     "test": "xo && nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "deploy": "now --public --env NODE_ENV=production && now alias"
