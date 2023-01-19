@@ -29,11 +29,11 @@
   },
   "homepage": "https://github.com/lukechilds/reverse-shell",
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^5.1.1",
     "coveralls": "^3.0.0",
     "eslint-config-xo-lukechilds": "^1.0.0",
     "nyc": "^11.0.3",
     "this": "^1.0.2",
-    "xo": "^0.20.1"
+    "xo": "^0.53.1"
   }
 }
