@@ -39,7 +39,10 @@ fi`;
 const handler = (request, response) => {
 	const { address } = request.query;
 
+	const one_month = 60 * 60 * 24 * 30;
+
 	response.setHeader('Content-Type', 'text/plain');
+	response.setHeader('Cache-Control', `s-maxage=${one_month}`); // Cache at edge
 	response.send(reverseShell(address));
 };
 
