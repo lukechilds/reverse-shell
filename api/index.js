@@ -36,10 +36,12 @@ fi`;
 	}, usage);
 };
 
-module.exports = reverseShell;
-
-module.exports.handler = (request, response) => {
+const handler = (request, response) => {
 	const { address } = request.query;
 
 	response.send(reverseShell(address));
 };
+
+module.exports = handler;
+
+module.exports.reverseShell = reverseShell;
