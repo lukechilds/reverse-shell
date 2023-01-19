@@ -7,10 +7,8 @@
     "src"
   ],
   "scripts": {
-    "start": "micro -l tcp://0.0.0.0:${PORT-3000}",
     "test": "xo && nyc ava",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "deploy": "now --public --env NODE_ENV=production && now alias"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "xo": {
     "extends": "xo-lukechilds"
@@ -30,9 +28,6 @@
     "url": "https://github.com/lukechilds/reverse-shell/issues"
   },
   "homepage": "https://github.com/lukechilds/reverse-shell",
-  "dependencies": {
-    "micro": "^9.0.0"
-  },
   "devDependencies": {
     "ava": "^0.25.0",
     "coveralls": "^3.0.0",
