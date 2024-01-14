@@ -3,6 +3,8 @@
 	<a href="https://reverse-shell.sh" target="_blank">
 		<img width="128" src="favicon.ico" alt="keyv">
     </a>
+	</br>
+	<a href="README_CN.md">Chinese documentation[中文文档]</a>
 </div>
 
 # reverse-shell
