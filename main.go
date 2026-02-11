@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 
@@ -16,8 +17,5 @@ func main() {
 
 	http.HandleFunc("/", handler.Handler)
 	fmt.Printf("Listening on :%s\n", port)
-	if err := http.ListenAndServe(":"+port, nil); err != nil {
-		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
-		os.Exit(1)
-	}
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
