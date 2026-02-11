@@ -1,7 +1,4 @@
 {
-    "redirects": [
-        {"source": "/about", "destination": "https://github.com/lukechilds/reverse-shell"}
-    ],
     "rewrites": [
         {"source": "/(.*)", "destination": "/api"}
     ]
