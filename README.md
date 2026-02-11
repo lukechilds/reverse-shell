@@ -42,7 +42,7 @@ This is meant to be used for pentesting or helping coworkers understand why they
 
 ## Demo
 
-<img src="https://i.imgur.com/qqjhxAw.gif" width="808">
+![](demo.svg)
 
 ## Tips
 
