@@ -9,8 +9,8 @@
 
 > Reverse Shell as a Service - https://reverse-shell.sh
 
+[![Tests](https://github.com/lukechilds/reverse-shell/actions/workflows/test.yml/badge.svg)](https://github.com/lukechilds/reverse-shell/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/reverse-shell/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/reverse-shell?branch=master)
-[![npm](https://img.shields.io/npm/v/reverse-shell.svg)](https://www.npmjs.com/package/reverse-shell)
 [![GitHub Donate](https://badgen.net/badge/GitHub/Sponsor/D959A7?icon=github)](https://github.com/sponsors/lukechilds)
 
 Easy to remember reverse shell that should work on most Unix-like systems.
